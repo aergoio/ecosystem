@@ -125,7 +125,7 @@ async function startTxSendRequest(txdata, msg, callback) {
 
   swal.fire({
     icon: 'success',
-    title: 'OK',
+    //title: 'Done',
     html: '<br>' + msg + '<br>&nbsp;',
     width: 600,
     padding: '3em',
@@ -210,7 +210,7 @@ async function add_new_app() {
     });
 }
 
-async function update_app(app_index) {
+window.update_app = async function(app_index) {
 
   var app = get_typed_app()
   if (!app) return
@@ -293,7 +293,7 @@ async function update_list() {
 
       var card =
 `<div class="col">
-<div class="card" onclick="display_update(${app_index})">
+<div class="card" onclick="window.display_update(${app_index})">
   <img class="card-img-top" src="${dapp.image_url}" alt="${dapp.name}"/>
   <div class="card-body">
     <h5 class="card-title">${dapp.name}</h5>
@@ -319,7 +319,7 @@ async function update_list() {
 
 }
 
-function display_update(app_index) {
+window.display_update = function(app_index) {
 
   var dapp = all_dapps[app_index]
 
@@ -332,7 +332,7 @@ function display_update(app_index) {
 
   document.getElementById("addButton").style.display = "none"
   document.getElementById("updateButton").style.display = "block"
-  document.getElementById("updateButton").setAttribute("onclick", "update_app(" + app_index + ")")
+  document.getElementById("updateButton").setAttribute("onclick", "window.update_app(" + app_index + ")")
 
   document.getElementById("modalTitle").innerHTML = "Update App"
 
