@@ -261,7 +261,7 @@ async function update_list() {
   // display the loading spinner
   document.getElementById('loader').style.display = 'block';
 
-  all_dapps = [];
+  all_dapps = [{name: "empty"}];
 
   for (var first = 1; ; first += 200) {
     var cards = "";
@@ -293,10 +293,10 @@ async function update_list() {
 
       var card =
 `<div class="col">
-<div class="card" onclick="window.display_update(${app_index})">
+<div class="card">
   <img class="card-img-top" src="${dapp.image_url}" alt="${dapp.name}"/>
   <div class="card-body">
-    <h5 class="card-title">${dapp.name}</h5>
+    <h5 class="card-title" onclick="window.display_update(${app_index})" style="cursor:pointer;">${dapp.name}&nbsp;&nbsp;&nbsp;✎</h5>
     <p class="card-text">${dapp.description}</p>
     <a href="${dapp.web2_url}" class="btn btn-primary ${has_web2}" target="_blank">Web2</a>&nbsp;
     <a href="${dapp.web3_url}" class="btn btn-primary ${has_web3}" target="_blank">Web3</a>
