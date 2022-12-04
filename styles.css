@@ -8865,9 +8865,10 @@ fa-icon .fa-2x {
 
 
 .loader1 {
-  display: inline-block;
+  display: block;
   width: 60px;
   height: 60px;
+  margin: auto;
 }
 .loader1:after {
   content: " ";
