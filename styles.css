@@ -8926,6 +8926,8 @@ img.card-img-top {
 	/* preserve aspect ratio */
 	max-height: 9rem;
 	width: auto;
+	/* avoid overflow */
+	max-width: 92%;
 	/* center image horizontally on div */
 	margin: auto;
 	display: block;
