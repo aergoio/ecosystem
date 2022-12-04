@@ -294,7 +294,9 @@ async function update_list() {
       var card =
 `<div class="col">
 <div class="card">
-  <img class="card-img-top" src="${dapp.image_url}" alt="${dapp.name}"/>
+  <div class="card-img-top">
+    <img class="card-img-top" src="${dapp.image_url}" alt="${dapp.name}"/>
+  </div>
   <div class="card-body">
     <h5 class="card-title" onclick="window.display_update(${app_index})" style="cursor:pointer;">${dapp.name}&nbsp;&nbsp;&nbsp;✎</h5>
     <p class="card-text">${dapp.description}</p>
