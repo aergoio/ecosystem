@@ -297,7 +297,7 @@ async function update_list() {
 `<div class="col">
 <div class="card">
   <div class="card-img-top">
-    <img class="card-img-top" src="${dapp.image_url}" onerror="this.src='images/favicon.png';"/>
+    <img class="card-img-top" src="${dapp.image_url}" onerror="this.src='../images/favicon.png';"/>
   </div>
   <div class="card-body">
     <h5 class="card-title" onclick="window.display_update(${app_index})" style="cursor:pointer;">${dapp.name}&nbsp;&nbsp;&nbsp;✎</h5>
