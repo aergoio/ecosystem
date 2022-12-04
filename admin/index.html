@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Aergo Ecosystem</title>
+
+<link rel="stylesheet" href="styles.css"/>
+
+<link rel="icon" href="images/favicon.png" sizes="32x32" />
+<link rel="icon" href="images/favicon.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="images/favicon.png" />
+<meta name="msapplication-TileImage" content="images/favicon.png" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/"><img src="images/aergo-black-logo.svg" alt="Aergo" height="30"/>ecosystem</a>
+          </div>
+          <div class="navbar-right">
+            <button class="btn btn-primary" id="connect-wallet" type="button">Connect Wallet</button>
+            <button class="btn btn-primary" id="displayInsert" type="button" style="display: none">Insert App</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container px-5 my-5">
+
+    <div id="list" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <!-- cards go here -->
+    </div>
+
+    <div id="loader" class="loader1"></div>
+
+    <div id="appModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="edit_app">
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="appName" type="text" placeholder="App Name" />
+                        <label for="appName">App Name</label>
+                        <div class="invalid-feedback" data-sb-feedback="appName:required">App Name is required.</div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="appDescription" type="text" placeholder="App Description" />
+                        <label for="appDescription">App Description</label>
+                        <div class="invalid-feedback" data-sb-feedback="appDescription:required">App Description is required.</div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="image" type="text" placeholder="Image" data-sb-validations="required" />
+                        <label for="image">Image URL</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="web2URL" type="text" placeholder="Web2 URL" data-sb-validations="required" />
+                        <label for="web2URL">Web2 URL</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input class="form-control" id="web3URL" type="text" placeholder="Web3 URL" data-sb-validations="required" />
+                      <label for="web3URL">Web3 URL</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="tags" type="text" placeholder="Tags (comma-separated)" />
+                        <label for="tags">Tags</label>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="closeButton" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="addButton">Insert App</button>
+                    <button type="button" class="btn btn-primary" id="updateButton">Update App</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- error message -->
+    <div id="error" class="alert alert-danger" style="display: none" role="alert">
+        <strong>Oops!</strong> Something went wrong. Please try again later.
+    </div>
+
+</div>
+
+<script src="bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="bundle.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>

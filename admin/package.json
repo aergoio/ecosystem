@@ -1,0 +1,27 @@
+{
+  "name": "ecosystem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "build": "browserify app.js -o bundle.js",
+    "watch": "watchify app.js -o bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aergoio/ecosystem.git"
+  },
+  "author": "Bernardo Ramos",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/aergoio/ecosystem/issues"
+  },
+  "homepage": "https://github.com/aergoio/ecosystem#readme",
+  "devDependencies": {
+    "browserify": "^16.5.2",
+    "watchify": "^3.11.1"
+  },
+  "dependencies": {
+    "@herajs/client": "^1.1.0"
+  }
+}
