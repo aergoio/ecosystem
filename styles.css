@@ -8937,3 +8937,7 @@ img.card-img-top {
 .card-body {
 	padding-top: 0.7rem;
 }
+
+a.navbar-brand {
+	font-size: xx-large;
+}
