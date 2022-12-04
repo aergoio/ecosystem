@@ -8942,3 +8942,7 @@ img.card-img-top {
 a.navbar-brand {
 	font-size: xx-large;
 }
+
+a.btn.btn-primary {
+	margin-right: 0.3rem;
+}

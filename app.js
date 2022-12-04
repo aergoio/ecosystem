@@ -302,7 +302,7 @@ async function update_list() {
   <div class="card-body">
     <h5 class="card-title" onclick="window.display_update(${app_index})" style="cursor:pointer;">${dapp.name}&nbsp;&nbsp;&nbsp;✎</h5>
     <p class="card-text">${dapp.description}</p>
-    <a href="${dapp.web2_url}" class="btn btn-primary ${has_web2}" target="_blank">Web2</a>&nbsp;
+    <a href="${dapp.web2_url}" class="btn btn-primary ${has_web2}" target="_blank">Web2</a>
     <a href="${dapp.web3_url}" class="btn btn-primary ${has_web3}" target="_blank">Web3</a>
   </div>
 </div>
