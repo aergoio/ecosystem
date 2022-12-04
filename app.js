@@ -288,6 +288,8 @@ async function update_list() {
       //dapp.image_url
       //dapp.tags
 
+      //if (!Array.isArray(dapp.tags)) dapp.tags = [];
+
       var has_web2 = (dapp.web2_url != "") ? "" : "hidden";
       var has_web3 = (dapp.web3_url != "") ? "" : "hidden";
 
